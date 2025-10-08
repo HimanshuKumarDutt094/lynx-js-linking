@@ -1,0 +1,16 @@
+// Placeholder gradle file for lynx-linking module. Integrate sources into your Android project.
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 31
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 31
+    versionCode 1
+    versionName "0.1.0"
+  }
+}
+
+dependencies {
+  // Add Lynx runtime dependencies when integrating
+}

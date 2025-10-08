@@ -1,0 +1,54 @@
+{
+  "name": "lynx-js-linking",
+  "version": "0.1.0",
+  "description": "LynxJS Linking native module",
+  "type": "module",
+  "homepage": "https://github.com/HimanshuKumarDutt094/lynx-js-linking#readme",
+  "bugs": {
+    "url": "https://github.com/HimanshuKumarDutt094/lynx-js-linking/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HimanshuKumarDutt094/lynx-js-linking.git"
+  },
+  "author": "Himanshu Kumar Dutt <adasimobenio@gmail.com>",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/global.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown && cp src/global.d.ts dist/global.d.ts",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && npm publish"
+  },
+  "license": "MIT",
+  "files": [
+    "android",
+    "ios",
+    "harmony",
+    "dist",
+    "src"
+  ],
+  "packageManager": "bun@1.2.23",
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "tsdown": "^0.15.6",
+    "typescript": "^5.9.3",
+    "bumpp": "^10.3.1"
+  },
+  "dependencies": {
+    "@lynx-js/types": "^3.4.11"
+  }
+}
